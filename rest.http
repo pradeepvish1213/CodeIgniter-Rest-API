@@ -1,0 +1,11 @@
+###
+http://localhost/codeigniter_rest/api/example/users/
+
+
+###
+http://localhost/codeigniter_rest/api/example/users/1
+Authorization : Basic YWRtaW46MTIzNA==
+
+###
+PUT http://localhost/codeigniter_rest/api/key
+Authorization : Basic YWRtaW46MTIzNA==
