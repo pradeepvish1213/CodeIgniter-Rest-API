@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 28, 2018 at 08:48 PM
--- Server version: 10.1.34-MariaDB
--- PHP Version: 7.1.20
+-- Generation Time: Aug 29, 2018 at 01:19 PM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -58,9 +58,8 @@ CREATE TABLE `keys` (
 --
 
 INSERT INTO `keys` (`id`, `user_id`, `key`, `level`, `ignore_limits`, `is_private_key`, `ip_addresses`, `date_created`) VALUES
-(1, 0, 'o8488s4c44ccccg4sscsco0ks808w0k00gkkk80w', 1, 1, 0, NULL, 1535481691),
-(2, 0, '880wsg044kowow8cswwk84so0gggsso4kg8s4k0s', 1, 1, 0, NULL, 1535481720),
-(3, 0, 'kc0c0g408wwgkc88wk8gcsck4wws4gcwg8oosk0w', 1, 1, 0, NULL, 1535481724);
+(1, 0, '0gw8gcwcwg848o844s0gsk4gg4g8c88k484w0ckk', 1, 1, 0, NULL, 1535527235),
+(2, 0, 'sks4cckwk08socg800cscgwgo0sc0ww8w44ko080', 1, 1, 0, NULL, 1535527362);
 
 -- --------------------------------------------------------
 
@@ -100,27 +99,64 @@ CREATE TABLE `logs` (
 --
 
 INSERT INTO `logs` (`id`, `uri`, `method`, `params`, `api_key`, `ip_address`, `time`, `rtime`, `authorized`, `response_code`) VALUES
-(1, '', 'get', NULL, '', '::1', 1535481034, 0.0432639, '0', 403),
-(2, '', 'get', NULL, '', '::1', 1535481095, 0.0285881, '0', 403),
-(3, '', 'get', NULL, '', '::1', 1535481183, 0.0185239, '0', 403),
-(4, '', 'get', NULL, '', '::1', 1535481203, 0.028543, '0', 403),
-(5, '', 'get', NULL, '', '::1', 1535481220, 0.01882, '0', 403),
-(6, '', 'get', NULL, '', '::1', 1535481263, 0.0145152, '0', 403),
-(7, 'api/key', 'get', NULL, '', '::1', 1535481527, 0.0224781, '0', 403),
-(8, 'api/key', 'get', NULL, '', '::1', 1535481531, 0.0252099, '0', 403),
-(9, 'api/key', 'put', NULL, '', '::1', 1535481547, 0.015651, '0', 403),
-(10, 'api/key', 'put', NULL, '', '::1', 1535481593, 0.0166392, '0', 403),
-(11, 'api/key', 'put', NULL, '', '::1', 1535481605, 0.0150001, '0', 403),
-(12, 'api/key', 'put', NULL, '', '::1', 1535481656, 0.00949502, '1', 0),
-(13, 'api/key', 'put', NULL, '', '::1', 1535481681, 0.0856581, '1', 0),
-(14, 'api/key', 'put', NULL, '', '::1', 1535481691, 0.042345, '1', 201),
-(15, 'api/key', 'put', NULL, '', '::1', 1535481720, 0.022089, '1', 201),
-(16, 'api/key', 'put', NULL, '', '::1', 1535481724, 0.030653, '1', 201),
-(17, 'welcome/users', 'get', NULL, '', '::1', 1535481795, 0.0303741, '1', 200),
-(18, 'welcome/users', 'get', NULL, '', '::1', 1535481819, 0.0156982, '1', 200),
-(19, 'welcome/users', 'get', NULL, '', '::1', 1535481896, 0.0152171, '1', 200),
-(20, '', 'get', NULL, '', '::1', 1535481918, 0.0349379, '1', 0),
-(21, '', 'get', NULL, '', '::1', 1535482027, 0.00944495, '1', 0);
+(1, '', 'get', NULL, '', '::1', 1535524838, 0.945035, '1', 0),
+(2, 'users/user', 'get', NULL, '', '::1', 1535524908, 1.01102, '1', 200),
+(3, 'users/user', 'post', 'a:1:{s:8:\"username\";s:7:\"Pradeep\";}', '', '::1', 1535525112, 0.901723, '1', 0),
+(4, 'users/user', 'post', 'a:1:{s:8:\"username\";s:7:\"Pradeep\";}', '', '::1', 1535525153, 0.904949, '1', 0),
+(5, 'users/user', 'post', 'a:3:{s:4:\"name\";s:19:\"Pradeep Vishwakarma\";s:8:\"username\";s:15:\"pradeepvish1213\";s:8:\"password\";s:11:\"pradeepvish\";}', '', '::1', 1535525662, 0.560595, '1', 0),
+(6, 'users/user', 'post', 'a:3:{s:4:\"name\";s:19:\"Pradeep Vishwakarma\";s:8:\"username\";s:15:\"pradeepvish1213\";s:8:\"password\";s:11:\"pradeepvish\";}', '', '::1', 1535525679, 1.04686, '1', 200),
+(7, 'users/user', 'post', 'a:3:{s:4:\"name\";s:19:\"Pradeep Vishwakarma\";s:8:\"username\";s:15:\"pradeepvish1213\";s:8:\"password\";s:11:\"pradeepvish\";}', '', '::1', 1535525737, 0.981379, '1', 200),
+(8, 'users', 'get', NULL, '', '::1', 1535525983, 1.02288, '1', 200),
+(9, 'users', 'get', NULL, '', '::1', 1535526256, 1.09861, '1', 200),
+(10, 'users', 'get', NULL, '', '::1', 1535526716, 0.984821, '1', 200),
+(11, 'users', 'get', NULL, '', '::1', 1535526725, 0.940982, '1', 200),
+(12, 'users', 'get', NULL, '', '::1', 1535527142, 0.925579, '1', 200),
+(13, 'api/key', 'put', NULL, '', '::1', 1535527235, 0.276127, '1', 201),
+(14, 'api/key', 'put', NULL, '', '::1', 1535527362, 0.267098, '1', 201),
+(15, '', 'get', NULL, '', '::1', 1535527553, 0.90413, '1', 0),
+(16, '', 'get', NULL, '', '::1', 1535527567, 0.856903, '1', 0),
+(17, '', 'get', NULL, '', '::1', 1535527953, 0.926225, '1', 0),
+(18, '', 'get', NULL, '', '::1', 1535527993, 0.980365, '1', 0),
+(19, '', 'get', NULL, '', '::1', 1535528029, 0.883735, '1', 0),
+(20, 'users', 'get', NULL, '', '::1', 1535528031, 0.927881, '1', 200),
+(21, '', 'get', NULL, '', '::1', 1535528214, 0.902921, '1', 0),
+(22, 'users', 'get', NULL, '', '::1', 1535528216, 1.20899, '1', 200),
+(23, '', 'get', NULL, '', '::1', 1535528225, 0.850139, '1', 0),
+(24, 'users', 'get', NULL, '', '::1', 1535528227, 1.13431, '1', 200),
+(25, '', 'get', NULL, '', '::1', 1535528356, 0.992059, '1', 0),
+(26, 'users', 'get', NULL, '', '::1', 1535528358, 1.43239, '1', 200),
+(27, '', 'get', NULL, '', '::1', 1535528452, 0.996201, '1', 0),
+(28, 'users', 'get', NULL, '', '::1', 1535528454, 1.41669, '1', 200),
+(29, '', 'get', NULL, '', '::1', 1535528477, 1.09345, '1', 0),
+(30, 'users', 'get', NULL, '', '::1', 1535528480, 1.14401, '1', 200),
+(31, '', 'get', NULL, '', '::1', 1535528541, 0.92829, '1', 0),
+(32, 'users', 'get', NULL, '', '::1', 1535528544, 0.973229, '1', 200),
+(33, '', 'get', NULL, '', '::1', 1535528563, 1.00242, '1', 0),
+(34, 'users', 'get', NULL, '', '::1', 1535528565, 0.973454, '1', 200),
+(35, '', 'get', NULL, '', '::1', 1535528576, 1.25156, '1', 0),
+(36, 'users', 'get', NULL, '', '::1', 1535528579, 1.71641, '1', 200);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `username`, `password`, `updated_date`) VALUES
+(1, 'Pradeep Vishwakarma', 'pradeepvish1213', '7274945c23eb2fe9b407ba84b023bf3097094026', '2018-08-29 06:54:39'),
+(2, 'Pradeep Vishwakarma', 'pradeepvish1213', '7274945c23eb2fe9b407ba84b023bf3097094026', '2018-08-29 06:55:38');
 
 --
 -- Indexes for dumped tables
@@ -151,6 +187,12 @@ ALTER TABLE `logs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -164,7 +206,7 @@ ALTER TABLE `access`
 -- AUTO_INCREMENT for table `keys`
 --
 ALTER TABLE `keys`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `limits`
@@ -176,7 +218,13 @@ ALTER TABLE `limits`
 -- AUTO_INCREMENT for table `logs`
 --
 ALTER TABLE `logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
